@@ -1,0 +1,24 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    >
+
+    <item
+        android:id="@+id/itemAddItem"
+        android:title="Add Item"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/itemInfo"
+        android:title="Implemented by Markus Hager"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/versionInfo"
+        android:orderInCategory="3"
+        android:title="Show Version"
+        app:showAsAction="never"
+        />
+</menu>
