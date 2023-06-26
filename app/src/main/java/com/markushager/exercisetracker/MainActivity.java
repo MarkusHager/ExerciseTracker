@@ -73,19 +73,37 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                switch (checkedId) {
-                    case R.id.rbMoveUp:
-                        mOption = 1;
-                        break;
-                    case R.id.rbMoveDown:
-                        mOption = 2;
-                        break;
-                    case R.id.rbSelectItem:
-                        mOption = OPTION_DEFAULT;
-                        break;
-                    default:
-                        mOption = OPTION_DEFAULT;
-                        Toast.makeText(getApplicationContext(),
+//                switch (checkedId) {
+//                    case R.id.rbMoveUp:
+//                        mOption = 1;
+//                        break;
+//                    case R.id.rbMoveDown:
+//                        mOption = 2;
+//                        break;
+//                    case R.id.rbSelectItem:
+//                        mOption = OPTION_DEFAULT;
+//                        break;
+//                    default:
+//                        mOption = OPTION_DEFAULT;
+//                        Toast.makeText(getApplicationContext(),
+//                            "Unknown Radio Button selected",Toast.LENGTH_LONG).show();
+//                }
+                if (checkedId == R.id.rbMoveUp)
+                {
+                    mOption = 1;
+                }
+                else if (checkedId == R.id.rbMoveDown)
+                {
+                    mOption = 2;
+                }
+                else if (checkedId == R.id.rbSelectItem)
+                {
+                    mOption = OPTION_DEFAULT;
+                }
+                else
+                {
+                    mOption = OPTION_DEFAULT;
+                    Toast.makeText(getApplicationContext(),
                             "Unknown Radio Button selected",Toast.LENGTH_LONG).show();
                 }
             }
@@ -249,20 +267,41 @@ public class MainActivity extends AppCompatActivity {
         String password;
         String msg;
 
-        switch (id) {
-            case R.id.itemAddItem:
-                intent = new Intent(MainActivity.this, AddItemActivity.class);
-                startActivityForResult(intent, Const.REQUEST_CODE_ADD_ITEM);
-                return true;
-            case R.id.itemInfo:
-                //Toast.makeText(getApplicationContext(), "Item 3 Selected", Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.versionInfo:
-                msg = "Version: " + Const.VERSION;
-                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+//        switch (id) {
+//            case R.id.itemAddItem:
+//                intent = new Intent(MainActivity.this, AddItemActivity.class);
+//                startActivityForResult(intent, Const.REQUEST_CODE_ADD_ITEM);
+//                return true;
+//            case R.id.itemInfo:
+//                //Toast.makeText(getApplicationContext(), "Item 3 Selected", Toast.LENGTH_LONG).show();
+//                return true;
+//            case R.id.versionInfo:
+//                msg = "Version: " + Const.VERSION;
+//                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+        if (id == R.id.itemAddItem)
+        {
+            intent = new Intent(MainActivity.this, AddItemActivity.class);
+            startActivityForResult(intent, Const.REQUEST_CODE_ADD_ITEM);
+            return true;
+        }
+        else if (id == R.id.itemInfo)
+        {
+            //Toast.makeText(getApplicationContext(), "Item 3 Selected", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else if (id == R.id.versionInfo)
+        {
+            msg = "Version: " + Const.VERSION;
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else
+        {
+            return super.onOptionsItemSelected(item);
         }
     }
 

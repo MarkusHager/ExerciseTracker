@@ -301,32 +301,64 @@ public class ExerciseActivity extends AppCompatActivity
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId)
             {
-                switch (checkedId)
+//                switch (checkedId)
+//                {
+//                    case R.id.mode5x5:
+//                        mModeLevel = Const.MODE_LEVEL_5x5;
+//                        break;
+//                    case R.id.mode3x5:
+//                        mModeLevel = Const.MODE_LEVEL_3x5;
+//                        break;
+//                    case R.id.mode3x3:
+//                        mModeLevel = Const.MODE_LEVEL_3x3;
+//                        break;
+//                    case R.id.mode1x3:
+//                        mModeLevel = Const.MODE_LEVEL_1x3;
+//                        break;
+//                    case R.id.mode5x3:
+//                        mModeLevel = Const.MODE_LEVEL_5x3;
+//                        mModeOption = Const.MODE_OPTION_FIX;
+//                        mRgModeOption.check(mModeOptionArray[mModeOption]);
+//                        break;
+//                    case R.id.mode1x5:
+//                        mModeLevel = Const.MODE_LEVEL_1x5;
+//                        mModeOption = Const.MODE_OPTION_FIX;
+//                        mRgModeOption.check(mModeOptionArray[mModeOption]);
+//                        break;
+//                    default:
+//                        Log.e(TAG, "Unknown mode level selected");
+//                }
+                if (checkedId == R.id.mode5x5)
                 {
-                    case R.id.mode5x5:
-                        mModeLevel = Const.MODE_LEVEL_5x5;
-                        break;
-                    case R.id.mode3x5:
-                        mModeLevel = Const.MODE_LEVEL_3x5;
-                        break;
-                    case R.id.mode3x3:
-                        mModeLevel = Const.MODE_LEVEL_3x3;
-                        break;
-                    case R.id.mode1x3:
-                        mModeLevel = Const.MODE_LEVEL_1x3;
-                        break;
-                    case R.id.mode5x3:
-                        mModeLevel = Const.MODE_LEVEL_5x3;
-                        mModeOption = Const.MODE_OPTION_FIX;
-                        mRgModeOption.check(mModeOptionArray[mModeOption]);
-                        break;
-                    case R.id.mode1x5:
-                        mModeLevel = Const.MODE_LEVEL_1x5;
-                        mModeOption = Const.MODE_OPTION_FIX;
-                        mRgModeOption.check(mModeOptionArray[mModeOption]);
-                        break;
-                    default:
-                        Log.e(TAG, "Unknown mode level selected");
+                    mModeLevel = Const.MODE_LEVEL_5x5;
+                }
+                else if (checkedId == R.id.mode3x5)
+                {
+                    mModeLevel = Const.MODE_LEVEL_3x5;
+                }
+                else if (checkedId == R.id.mode3x3)
+                {
+                    mModeLevel = Const.MODE_LEVEL_3x3;
+                }
+                else if (checkedId == R.id.mode1x3)
+                {
+                    mModeLevel = Const.MODE_LEVEL_1x3;
+                }
+                else if (checkedId == R.id.mode5x3)
+                {
+                    mModeLevel = Const.MODE_LEVEL_5x3;
+                    mModeOption = Const.MODE_OPTION_FIX;
+                    mRgModeOption.check(mModeOptionArray[mModeOption]);
+                }
+                else if (checkedId == R.id.mode1x5)
+                {
+                    mModeLevel = Const.MODE_LEVEL_1x5;
+                    mModeOption = Const.MODE_OPTION_FIX;
+                    mRgModeOption.check(mModeOptionArray[mModeOption]);
+                }
+                else
+                {
+                    Log.e(TAG, "Unknown mode level selected");
                 }
                 mWorkSets = Const.WORK_SETS[mModeLevel];
                 mWorkReps = Const.WORK_REPS[mModeLevel];
@@ -354,16 +386,28 @@ public class ExerciseActivity extends AppCompatActivity
             public void onCheckedChanged(RadioGroup group, int checkedId)
             {
 
-                switch (checkedId)
+//                switch (checkedId)
+//                {
+//                    case R.id.modeFix:
+//                        mModeOption = Const.MODE_OPTION_FIX;
+//                        break;
+//                    case R.id.modeVar:
+//                        mModeOption = Const.MODE_OPTION_VAR;
+//                        break;
+//                    default:
+//                        Log.e(TAG, "Unknown mode option selected");
+//                }
+                if (checkedId == R.id.modeFix)
                 {
-                    case R.id.modeFix:
-                        mModeOption = Const.MODE_OPTION_FIX;
-                        break;
-                    case R.id.modeVar:
-                        mModeOption = Const.MODE_OPTION_VAR;
-                        break;
-                    default:
-                        Log.e(TAG, "Unknown mode option selected");
+                    mModeOption = Const.MODE_OPTION_FIX;
+                }
+                else if (checkedId == R.id.modeVar)
+                {
+                    mModeOption = Const.MODE_OPTION_VAR;
+                }
+                else
+                {
+                    Log.e(TAG, "Unknown mode option selected");
                 }
             }
         });
@@ -390,16 +434,28 @@ public class ExerciseActivity extends AppCompatActivity
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId)
             {
-                switch (checkedId)
+//                switch (checkedId)
+//                {
+//                    case R.id.weightIncrSmall:
+//                        mWeightIncrSize = Const.WEIGHT_INCR_SMALL;
+//                        break;
+//                    case R.id.weightIncrBig:
+//                        mWeightIncrSize = Const.WEIGHT_INCR_BIG;
+//                        break;
+//                    default:
+//                        Log.e(TAG, "Unknown weight increment size selected");
+//                }
+                if (checkedId == R.id.weightIncrSmall)
                 {
-                    case R.id.weightIncrSmall:
-                        mWeightIncrSize = Const.WEIGHT_INCR_SMALL;
-                        break;
-                    case R.id.weightIncrBig:
-                        mWeightIncrSize = Const.WEIGHT_INCR_BIG;
-                        break;
-                    default:
-                        Log.e(TAG, "Unknown weight increment size selected");
+                    mWeightIncrSize = Const.WEIGHT_INCR_SMALL;
+                }
+                else if (checkedId == R.id.weightIncrBig)
+                {
+                    mWeightIncrSize = Const.WEIGHT_INCR_BIG;
+                }
+                else
+                {
+                    Log.e(TAG, "Unknown weight increment size selected");
                 }
             }
         });
